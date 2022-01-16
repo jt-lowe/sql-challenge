@@ -1,4 +1,4 @@
---EmployeeSQL
+--EmployeeSQL_schema
 
 --Create all tables to hold csv data
 CREATE TABLE titles (
@@ -10,11 +10,11 @@ CREATE TABLE employees (
 	emp_no INTEGER PRIMARY KEY,
 	emp_title_id VARCHAR,
 		FOREIGN KEY (emp_title_id) REFERENCES titles(title_id),
-	birth_date VARCHAR,
+	birth_date DATE,
 	first_name VARCHAR,
 	last_name VARCHAR,
 	sex VARCHAR,
-	hire_date VARCHAR
+	hire_date DATE
 );
 
 CREATE TABLE salaries (
